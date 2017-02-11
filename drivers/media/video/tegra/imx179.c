@@ -1279,8 +1279,8 @@ static void imx179_gpio_init(struct imx179_info *info)
 {
 	char label[32];
 	unsigned long flags;
-	unsigned type;
-	unsigned i;
+	unsigned i = 0;
+	unsigned type = imx179_gpios[i].gpio_type;
 	unsigned j;
 	int err;
     
@@ -1293,7 +1293,6 @@ static void imx179_gpio_init(struct imx179_info *info)
 		return;
 
 	for (i = 0; i <= ARRAY_SIZE(imx179_gpios); i++) {
-		type = imx179_gpios[i].gpio_type;
 		for (j = 0; j < info->pdata->gpio_count; j++) {
 			if (type == info->pdata->gpio[j].gpio_type)
 				break;
