@@ -19,6 +19,7 @@
 *.so.dbg
 *.mod.c
 *.i
+*.img
 *.lst
 *.symtypes
 *.order
@@ -52,6 +53,11 @@ Module.symvers
 # Debian directory (make deb-pkg)
 #
 /debian/
+
+#
+# Temporary directory to store modules and firmwares
+#
+/mod/
 
 #
 # git files that we don't want to ignore even it they are dot-files
